@@ -104,9 +104,12 @@ h4 {
 }
 
 .project-card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.6);
   transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.12);
+  box-shadow:
+    0 0 0 1px rgba(59, 130, 246, 0.3),
+    0 0 30px rgba(59, 130, 246, 0.15),
+    0 0 60px rgba(59, 130, 246, 0.08);
 }
 
 .project-card:hover .project-arrow {
@@ -147,4 +150,14 @@ h4 {
 
 .mobile-menu.open {
   transform: translateX(0);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

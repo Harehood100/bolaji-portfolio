@@ -1,30 +1,37 @@
-function Hero() {
-  return (<section
-    id="hero"
-    className="min-h-screen flex items-center pt-16 px-6"
-  > <div className="max-w-6xl mx-auto w-full py-24">
-      {/* Available Badge */} <div className="flex items-center gap-3 mb-8"> <div className="w-2.5 h-2.5 rounded-full bg-green-400 active-dot"></div> <span className="font-mono text-xs text-[#8b949e] tracking-widest uppercase">
-        Available for opportunities </span> </div>
+{/* Main Content */ }
+<div className="relative z-10 w-full max-w-6xl mx-auto py-24">
+  <div className="grid items-center gap-12 md:grid-cols-2">
 
-      ```
+    {/* Left — Text Content */}
+    <div>
+      {/* Available Badge */}
+      <div className="flex items-center gap-3 mb-8">
+        <div className="w-2.5 h-2.5 rounded-full bg-green-400 active-dot"></div>
+        <span className="font-mono text-xs text-[#8b949e] tracking-widest uppercase">
+          Available for opportunities
+        </span>
+      </div>
+
       {/* Name */}
-      <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-6">
+      <h1 className="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-4">
         <span className="text-[#e6edf3]">Bolaji</span>
         <br />
         <span className="gradient-text glow">Bakare.</span>
       </h1>
 
-      {/* Role */}
-      <p className="font-display text-xl md:text-2xl text-[#8b949e] font-medium mb-4 max-w-xl">
-        Frontend Developer — building fast, responsive and interactive web
-        experiences from{' '}
-        <span className="text-[#e6edf3]">Lagos, Nigeria 🇳🇬</span>
-      </p>
+      {/* Typing Effect */}
+      <div className="mb-4">
+        <span className="font-display text-xl md:text-2xl text-[#3b82f6] font-semibold typing-cursor">
+          {typedText}
+        </span>
+      </div>
 
       {/* Description */}
       <p className="text-[#8b949e] text-base max-w-lg leading-relaxed mb-10">
-        I turn ideas into pixel-perfect products. React, Next.js,
-        TypeScript—and enough curiosity to keep learning every single day.
+        Building fast, responsive and interactive web experiences from{' '}
+        <span className="text-[#e6edf3]">Lagos, Nigeria 🇳🇬</span> — React,
+        Next.js, TypeScript and enough curiosity to keep learning every single
+        day.
       </p>
 
       {/* CTA Buttons */}
@@ -53,11 +60,14 @@ function Hero() {
         </a>
       </div>
 
-      {/* Stats */}
-      <div className="flex flex-wrap gap-8 border-t border-[#21262d] pt-8">
+      {/* Stats with Counter */}
+      <div
+        ref={statsRef}
+        className="flex flex-wrap gap-8 border-t border-[#21262d] pt-8"
+      >
         <div>
           <p className="font-display font-bold text-3xl text-[#e6edf3]">
-            12+
+            {projects}+
           </p>
           <p className="text-xs text-[#8b949e] mt-1 tracking-wide">
             Projects Built
@@ -68,10 +78,10 @@ function Hero() {
 
         <div>
           <p className="font-display font-bold text-3xl text-[#e6edf3]">
-            6
+            {techs}+
           </p>
           <p className="text-xs text-[#8b949e] mt-1 tracking-wide">
-            Tech Stack
+            Technologies
           </p>
         </div>
 
@@ -79,7 +89,7 @@ function Hero() {
 
         <div>
           <p className="font-display font-bold text-3xl text-[#e6edf3]">
-            1
+            {capstone}
           </p>
           <p className="text-xs text-[#8b949e] mt-1 tracking-wide">
             Team Capstone
@@ -98,10 +108,47 @@ function Hero() {
         </div>
       </div>
     </div>
-  </section>
 
+    {/* Right — Profile Image */}
+    <div className="hidden md:flex justify-center items-center">
+      <div className="relative">
+        {/* Outer glow ring */}
+        <div
+          className="absolute inset-0 rounded-full blur-2xl opacity-30"
+          style={{
+            background: 'radial-gradient(circle, #3b82f6, transparent)',
+          }}
+        />
 
-  )
-}
+        {/* Rotating border ring */}
+        <div
+          className="absolute -inset-1 rounded-full"
+          style={{
+            background:
+              'conic-gradient(from 0deg, #3b82f6, #818cf8, #06b6d4, #3b82f6)',
+            animation: 'spin 6s linear infinite',
+            padding: '2px',
+          }}
+        >
+          <div className="w-full h-full rounded-full bg-[#07090f]" />
+        </div>
 
-export default Hero
+        {/* Profile Image */}
+        <img
+          src={profileImg}
+          alt="Bolaji Bakare"
+          className="relative w-72 h-72 rounded-full object-cover object-top border-4 border-[#07090f]"
+        />
+
+        {/* Floating Badge */}
+        <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#0d1117] border border-[#21262d] rounded-full px-4 py-2 flex items-center gap-2 whitespace-nowrap">
+          <div className="w-2 h-2 rounded-full bg-green-400 active-dot"></div>
+          <span className="font-mono text-xs text-[#8b949e]">
+            Available to hire
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

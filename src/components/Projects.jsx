@@ -14,8 +14,8 @@ const projects = [
     tag: 'Live · Vercel',
     title: 'CryptoDash — Crypto Dashboard',
     desc: 'Real-time cryptocurrency metrics dashboard. Top 20 coins by market cap, 7-day price history charts, animated stats, search & sort, dark/light mode — all powered by CoinGecko API.',
-    stack: ['Next.js', 'TypeScript', 'Zustand', 'Recharts', 'CoinGecko API', 'Tailwind'],
-    link: 'https://crypto-dashboard-ebon-iota.vercel.app',
+    stack: ['React 18', 'Tailwind CSS', 'Zustand', 'Binance public API', 'Chart.js', 'Canvas API', 'Vite', 'PostCSS + Autoprefixer', 'GitHub', 'Vercel'],
+    link: 'https://crypto-dashboard-py5t.vercel.app/',
     color: 'bg-yellow-500/10',
   },
   {

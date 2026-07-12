@@ -5,7 +5,7 @@ const projects = [
     title: 'Naillaz — Fintech Dashboard',
     desc: 'Full-stack financial dashboard built with a 6-person team. Features authentication, live API integration, interactive charts, budget tracking and savings goals.',
     stack: ['Next.js', 'TypeScript', 'Chart.js', 'REST API', 'JWT Auth'],
-    link: 'https://github.com/odurowaa-jd/spendwise-dashboard',
+    link: 'http://localhost:3000/login',
     color: 'bg-blue-500/10',
     featured: true,
   },
